@@ -30,31 +30,33 @@ public class DeleteTeamCtl extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		try {
-			long id = Long.parseLong(request.getParameter("id"));
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        try {
+            long teamId = Long.parseLong(request.getParameter("id"));
 
-			TeamModel model = new TeamModel();
+            TeamModel teamModel = new TeamModel();
 
-			boolean isDeleted = model.delete(id);
+            boolean isDeleted = teamModel.delete(teamId);
 
-			if (isDeleted) {
-				request.setAttribute("success", "Team is deleted Successfully..!");
-			} else {
-				request.setAttribute("error", "User deletion failed.");
-			}
+            if (isDeleted) {
+                request.setAttribute("success", "Team is deleted successfully.");
+            } else {
+                request.setAttribute("error", "Team deletion failed.");
+            }
 
-			List<TeamBean> list =  model.list(id);
+            // Retrieve the list of teams (including remaining teams)
+            UserBean userBean = (UserBean) request.getSession().getAttribute("userbean");
+            long userId = userBean.getId();
+            List<TeamBean> teamList = teamModel.list(userId); // Assuming you have a list method in TeamModel that retrieves teams by user ID
 
-			request.setAttribute("list", list);
-		} catch (Exception e) {
+            request.setAttribute("list", teamList); // The attribute name should be "teamList", not "list"
+        } catch (Exception e) {
+            e.printStackTrace(); // Handle exceptions appropriately
+        }
 
-		}
+        request.getRequestDispatcher("/jsp/TeamView.jsp").forward(request, response);
+    }
 
-		request.getRequestDispatcher("/jsp/TeamView.jsp").forward(request, response);
-
-	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

@@ -113,6 +113,18 @@
   	<description></description>
   	<servlet-class>in.co.online.project.submission.ctl.ViewPPTServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>DeleteStudentCtl</servlet-name>
+  	<display-name>DeleteStudentCtl</display-name>
+  	<description></description>
+  	<servlet-class>in.co.online.project.submission.ctl.DeleteStudentCtl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ViewAllProjects</servlet-name>
+  	<display-name>ViewAllProjects</display-name>
+  	<description></description>
+  	<servlet-class>in.co.online.project.submission.ctl.ViewAllProjects</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>LoginCtl</servlet-name>
   	<url-pattern>/LoginCtl</url-pattern>
@@ -184,6 +196,14 @@
   <servlet-mapping>
   	<servlet-name>ViewPPTServlet</servlet-name>
   	<url-pattern>/ViewPPTServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteStudentCtl</servlet-name>
+  	<url-pattern>/DeleteStudentCtl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ViewAllProjects</servlet-name>
+  	<url-pattern>/ViewAllProjects</url-pattern>
   </servlet-mapping>
 
   

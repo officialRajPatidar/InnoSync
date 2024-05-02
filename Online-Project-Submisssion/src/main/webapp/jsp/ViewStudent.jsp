@@ -123,7 +123,7 @@ h1{color: #fed136;
 
 
 						<td style="text-align: center;"><a class=""
-							href="/Online-Project-Submisssion/DeleteFacultyCtl?id=<%=ub.getId()%>"> <i
+							href="/Online-Project-Submisssion/DeleteStudentCtl?id=<%=ub.getId()%>"> <i
 								class="fa fa-trash" style="font-size: 24px; color: white;"></i>
 						</a>&nbsp; &nbsp; <a class="btn"
 							href="/Online-Project-Submisssion/EditFacultyCtl?id=<%=ub.getId()%>"> <i

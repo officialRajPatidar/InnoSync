@@ -72,6 +72,31 @@ public class ProjectModel {
         return list;
     }
 
+    
+    public List<ProjectBean> alllist(long facultyId) throws SQLException {
+        ProjectBean projectBean = null;
+        Connection con = null;
+        con = Model.getCon();
+        PreparedStatement ps = con.prepareStatement("SELECT pd.* FROM project_details pd JOIN student_faculty_mapping fsm ON pd.student_id = fsm.studentid WHERE fsm.facultyid = ?");
+        ps.setLong(1, facultyId);
+        ResultSet rs = ps.executeQuery();
+        ArrayList<ProjectBean> list = new ArrayList<ProjectBean>();
+        while (rs.next()) {
+            projectBean = new ProjectBean();
+            projectBean.setId(rs.getLong(1));
+            projectBean.setTeamName(rs.getString(2));
+            projectBean.setGuideName(rs.getString(3));
+            projectBean.setProjectName(rs.getString(4));
+            projectBean.setProjectProblem(rs.getString(5));
+            projectBean.setProjectPpt(rs.getBytes(6));
+            projectBean.setGithupUrl(rs.getString(7));
+            projectBean.setStudent_id(rs.getLong(8));
+                
+            list.add(projectBean);
+        }
+        return list;
+    }
+
     public Blob getProjectPPT(long projectId) throws SQLException {
         Connection con = null;
         PreparedStatement ps = null;

@@ -93,7 +93,7 @@ h1 {
 						<a class="dropdown-item" href="ViewFaculty">View Faculty</a>
 						
 						<a class="dropdown-item" href="ViewStudentByAdmine">View Student</a>
-												<a class="dropdown-item" href="ViewProjectsCtl">View Project</a>
+												<a class="dropdown-item" href="ViewAllProjects">View Project</a>
 												
 									<a
 							class="dropdown-item" href="ViewTeamByAdimin">View Team</a>
