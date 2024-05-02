@@ -1,0 +1,236 @@
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.text-blk {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
+
+.responsive-cell-block {
+  min-height: 75px;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: space-evenly;
+}
+
+.outer-container {
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  background-color: rgb(244, 252, 255);
+}
+
+.inner-container {
+  max-width: 1320px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+
+.section-head-text {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 48px;
+  color: rgb(0, 135, 177);
+  margin: 0 0 10px 0;
+}
+
+.section-subhead-text {
+  font-size: 25px;
+  color: rgb(153, 153, 153);
+  line-height: 35px;
+  max-width: 470px;
+  text-align: center;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 60px;
+  margin-left: 0px;
+}
+
+.img-wrapper {
+  width: 100%;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-links {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(102, 102, 102);
+  margin-top: 50px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+
+.position {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(0, 135, 177);
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+}
+
+.team-card-container {
+  width: 280px;
+  margin: 0 0 40px 0;
+}
+
+@media (max-width: 500px) {
+  .outer-container {
+    padding: 10px 20px 10px 20px;
+  }
+
+  .section-head-text {
+    text-align: center;
+  }
+}
+
+/* Add this CSS to your stylesheet */
+.rounded-image {
+  width: 250px; /* Set the desired width */
+  height: 250px; /* Set the desired height (should be equal to width for a perfect circle) */
+  overflow: hidden;
+  border-radius: 50%; /* Makes the image circular */
+  margin: 0 auto;
+  box-shadow: 1px -1px 14px 4px; /* Center the image horizontally if needed */
+}
+
+.team-img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+body {
+            margin: 0px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            transition: background 0.5s, padding 0.5s;
+        }
+
+        header.scrolled {
+            background: #343a40; /* Change to your desired background color */
+            padding: 0px 0;
+            /* Adjust to your desired padding */
+        }
+
+        
+         .btn-3d {
+         margin-top:40px;
+            display: inline-block;
+            border: 2px solid #f1c40f;
+            background-color: #f1c40f;
+            color: #fff;
+            padding: 15px 30px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 20px;
+        }
+
+        .btn-3d::before {
+            content: "";
+            position: absolute;
+            background: #f1c40f;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 100%;
+            transition: left 0.3s;
+            z-index: -1;
+        }
+
+        .btn-3d:hover {
+            background-color: black;
+            transform: scale(1.1);
+        }
+
+        .btn-3d:hover::before {
+            left: 0;
+        }
+
+        h1 {
+            
+        }
+        #contact{
+			
+			height:600px;		}
+			
+			#services{
+				
+				margin-top: 80px;
+				margin-bottom: 60px;
+				text-decoration: solid;
+			}
+			.text-uppercase{
+				    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-weight: bolder;
+			}
+			
+			.text-muted{	
+				    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 85px;
+    text-transform: none;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+			}
+			.form-control{
+				height: 30px;
+			}
